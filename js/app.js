@@ -1,14 +1,16 @@
 'use strict';
 
+let counter = 0;
 
 function check(ans) {
     if (ans === "yes" | ans ==="y") {
         // console.log ("Correct !!")
         alert ("Correct !!")
+        counter = counter + 1 ;     
 
     } else if (ans == "no" | ans === "n") {
-        // console.log ("Wrong")
-        alert ("Wrong")
+        // console.log ("Wrong!!")
+        alert ("Wrong!!")
         
 
     } else {
@@ -35,11 +37,65 @@ check (q5)
 
 
 
-// 2nd Story 
 
-let qNmae = prompt ("And you, What is your name? ");
-alert ("Hello, " + qNmae + " It is nice to meet you !!")
-alert (qNmae + ", I hope, you live a long happy life <3, Thank you")
+for (let i = 0; i < 4; i++) {
+    let q6 = prompt ("Guess the correct number, u have only 4 chanses");
+    let ans = 6;
+    console.log(ans);
+    if (q6 < ans) {
+        alert ("too low");
+        
+    }
+    else if (q6 > ans) {
+        alert ("too high");
+        
+    }
+    else if (q6 == ans) {
+        alert ("correct !!");
+        counter = counter + 1 ; 
+        break; }
+    else {
+        alert ("You put random alphapets");
+        
+    }
+}
+
+let cans ; 
+for (let i = 0; i < 6; i++) {
+    let q7 = prompt ("Guess my fav movie, you have only 6 choices"); 
+    let myFav = ["The Shawshank Redemption","The Godfather","The Godfather: Part II","The Dark Knight","12 Angry Men","Schindler's List","The Lord of the Rings: The Return of the King","Pulp Fiction","The Good, the Bad and the Ugly","The Lord of the Rings: The Fellowship of the Ring" ];
+    for (let i = 0; i < 10; i++) {
+        if (q7 === myFav[i]) {
+            cans = myFav[i] ; 
+            break;
+        } 
+      
+        }
+
+        if (q7 === cans) {
+
+            alert ("Correct")
+            counter = counter + 1 ;
+            break;
+        } else {
+
+            alert ("Wrong")
+        }
+        
+    //    console.log (q7)  ;
+    }
+    
+
+
+
+alert ("Your score is: " + counter);
+
+
+// // 2nd Story 
+
+// let qNmae = prompt ("And you, What is your name? ");
+// alert ("Hello, " + qNmae + " It is nice to meet you !!")
+// alert (qNmae + ", I hope, you live a long happy life <3, Thank you")
 
 
 

@@ -24,7 +24,7 @@ function q6() {
   for (let i = 0; i < 4; i++) {
     let q6 = parseInt( prompt ('Guess the correct number, u have only 4 chanses'));
     let ans = 6;
-    console.log(ans);
+    // console.log(ans);
     if (q6 < ans) {
       alert ('too low');
     }
